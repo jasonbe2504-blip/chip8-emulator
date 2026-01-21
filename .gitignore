@@ -1,0 +1,28 @@
+# Fichiers temporaires/backup
+*.swp
+*.swo
+*.backup*
+*.bak
+*.temp
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de log
+*.log
+*.txt
+
+# Fichiers spécifiques à ignorer
+output.log
+test_log.txt
+code.txt
+preuves_code_complet.txt
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Système
+.DS_Store
+Thumbs.db
