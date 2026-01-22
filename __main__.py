@@ -27,24 +27,24 @@ def main():
     try:
         with open(rom_file, "rb") as f:
             data = f.read()
-            print(f"✅ ROM chargée: {len(data)} octets")
+            print(f"ROM chargée: {len(data)} octets")
             vm.load_rom(data)
             # Forcer un affichage initial
             for x in range(20, 44):
                 for y in range(10, 22):
                     vm.display[x][y] = 1
     except FileNotFoundError:
-        print(f"❌ FICHIER NON TROUVÉ: {rom_file}")
+        print(f"FICHIER NON TROUVÉ: {rom_file}")
         # Mode test
         for x in range(20, 44):
             for y in range(10, 22):
                 vm.display[x][y] = 1
     except Exception as e:
-        print(f"❌ ERREUR: {e}")
+        print(f" ERREUR: {e}")
     
     # FORCER redessin
     vm.needs_redraw = True
-    print("🎨 needs_redraw = True (forcé)")
+    print(" needs_redraw = True (forcé)")
     
     print("\n" + "="*50)
     print("Contrôles :")
@@ -76,7 +76,7 @@ def main():
                     running = False
                 elif event.key == pygame.K_SPACE:
                     paused = not paused
-                    status = "⏸️  PAUSE" if paused else "▶️  REPRISE"
+                    status = "⏸️PAUSE" if paused else " REPRISE"
                     print(status)
         
         # --- Si pas en pause, exécuter ---
